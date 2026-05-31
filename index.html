@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoSouq JO — الدعم الفني | Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --maroon: #6e1428;
+    --maroon-dark: #3a0a14;
+    --maroon-deep: #1a0408;
+    --gold: #c9a84c;
+    --gold-light: #e8c86a;
+    --cream: #f5ede0;
+    --white: #ffffff;
+    --text-muted: #9a7a5a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--maroon-deep);
+    color: var(--white);
+    min-height: 100vh;
+    direction: rtl;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(160deg, #3a0a14 0%, #1a0408 60%, #0d0204 100%);
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(201,168,76,0.03) 80px,
+      rgba(201,168,76,0.03) 82px
+    );
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    border: 2.5px solid var(--gold);
+    background: rgba(201,168,76,0.08);
+    margin-bottom: 20px;
+    font-size: 38px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .hero h2 {
+    font-size: clamp(16px, 3vw, 22px);
+    font-weight: 400;
+    color: var(--cream);
+    opacity: 0.85;
+    margin-bottom: 6px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  .divider {
+    width: 160px;
+    height: 2px;
+    margin: 24px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    position: relative;
+  }
+  .divider::after {
+    content: '◆';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gold);
+    font-size: 10px;
+    background: var(--maroon-dark);
+    padding: 0 6px;
+  }
+
+  /* ── Main ── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* ── Contact cards ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 48px 0 40px;
+  }
+
+  .contact-card {
+    background: linear-gradient(135deg, rgba(110,20,40,0.35), rgba(26,4,8,0.6));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
+    display: block;
+  }
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .contact-card .icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    color: var(--cream);
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  /* ── Section titles ── */
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 26px;
+    background: var(--gold);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { margin-top: 50px; }
+
+  .faq-item {
+    background: rgba(110,20,40,0.2);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 20px;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    direction: rtl;
+  }
+
+  .faq-q:hover { color: var(--gold); }
+
+  .faq-q .arrow {
+    color: var(--gold);
+    font-size: 18px;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+
+  .faq-q.open .arrow { transform: rotate(180deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    font-size: 15px;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.8;
+    padding: 0 20px;
+  }
+
+  .faq-a.open {
+    max-height: 300px;
+    padding: 0 20px 18px;
+  }
+
+  /* ── Info section ── */
+  .info-section {
+    margin-top: 50px;
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 16px;
+    padding: 32px 28px;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    font-size: 15px;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .label { color: var(--text-muted); }
+  .info-row .value { color: var(--cream); font-weight: 700; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--maroon-dark);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  footer span { color: var(--gold); }
+
+  /* ── Contact form ── */
+  .form-section { margin-top: 50px; }
+
+  .form-group { margin-bottom: 16px; }
+
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--white);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 15px;
+    direction: rtl;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-group select option { background: #2a0a14; }
+
+  .btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--maroon), #9b2040);
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover {
+    background: linear-gradient(135deg, #9b2040, var(--maroon));
+    transform: translateY(-1px);
+  }
+
+  .success-msg {
+    display: none;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    color: var(--gold);
+    font-size: 16px;
+    margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="logo-wrap">🚗</div>
+  <h1>AUTOSOUQ JO</h1>
+  <h2>مركز الدعم الفني</h2>
+  <p>Support Center</p>
+  <div class="divider"></div>
+  <p style="font-size:14px; color:var(--cream); opacity:0.7;">
+    نحن هنا لمساعدتك · We're here to help
+  </p>
+</div>
+
+<!-- Main -->
+<div class="container">
+
+  <!-- Contact Cards -->
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:rehamkhalil003@gmail.com">
+      <span class="icon">✉️</span>
+      <h3>البريد الإلكتروني</h3>
+      <p>rehamkhalil003@gmail.com</p>
+    </a>
+    <a class="contact-card" href="https://wa.me/00962799709164">
+      <span class="icon">💬</span>
+      <h3>واتساب</h3>
+      <p>تواصل معنا مباشرة على واتساب</p>
+    </a>
+    <div class="contact-card">
+      <span class="icon">🕐</span>
+      <h3>ساعات الدعم</h3>
+      <p>الأحد – الخميس<br>9 صباحاً – 6 مساءً</p>
+    </div>
+  </div>
+
+  <!-- App Info -->
+  <div class="info-section">
+    <div class="section-title">معلومات التطبيق · App Info</div>
+    <div class="info-row">
+      <span class="label">اسم التطبيق</span>
+      <span class="value">AutoSouq JO</span>
+    </div>
+    <div class="info-row">
+      <span class="label">المطوّر</span>
+      <span class="value">AutoSouq JO Team</span>
+    </div>
+    <div class="info-row">
+      <span class="label">المنصة</span>
+      <span class="value">iOS & Android</span>
+    </div>
+    <div class="info-row">
+      <span class="label">الدولة</span>
+      <span class="value">الأردن 🇯🇴</span>
+    </div>
+    <div class="info-row">
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value">rehamkhalil003@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section-title">الأسئلة الشائعة · FAQ</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        كيف أضيف إعلانًا على التطبيق؟
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        اضغط على زر "أضف إعلان" في الشريط السفلي، ثم اختر نوع الإعلان (سيارة أو قطعة غيار)، وأدخل التفاصيل والصور، ثم اضغط نشر. سيتم مراجعة إعلانك خلال أقل من ساعة.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        كيف أميّز إعلاني ليظهر في أول النتائج؟
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        من صفحة "إعلاناتي"، اضغط على الإعلان الذي تريد تمييزه واختر "تمييز الإعلان". الإعلانات المميزة تحصل على شارة ⭐ وتظهر في أعلى نتائج البحث.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        كيف أشتري باقة أو أرقّي حسابي؟
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        اذهب إلى "حسابي" ثم "باقتي"، ستجد الباقات المتاحة. اختر الباقة المناسبة وأكمل الدفع عبر App Store أو Google Play بشكل آمن.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        كيف أبحث عن قطعة غيار لسيارتي؟
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        اضغط على "بحث القطع" في الشريط السفلي، ثم استخدم الفلاتر لتحديد ماركة سيارتك، الموديل، السنة، ونوع القطعة. يمكنك أيضاً البحث بالاسم أو رقم القطعة مباشرةً.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        كيف أحذف حسابي أو بياناتي؟
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        لحذف حسابك، اذهب إلى "حسابي" ← "الإعدادات" ← "حذف الحساب". أو تواصل معنا عبر البريد الإلكتروني rehamkhalil003@gmail.com وسنقوم بمعالجة طلبك خلال 48 ساعة.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How do I contact support in English?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a" style="direction:ltr; text-align:left;">
+        You can reach us anytime at <strong style="color:var(--gold)">rehamkhalil003@gmail.com</strong>. We respond within 24 hours on business days (Sunday–Thursday). For urgent issues, use our WhatsApp support.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contact Form -->
+  <div class="form-section">
+    <div class="section-title">تواصل معنا · Contact Us</div>
+
+    <div class="form-group">
+      <label>الاسم الكامل · Full Name</label>
+      <input type="text" id="f-name" placeholder="أدخل اسمك">
+    </div>
+    <div class="form-group">
+      <label>البريد الإلكتروني · Email</label>
+      <input type="email" id="f-email" placeholder="example@email.com" dir="ltr">
+    </div>
+    <div class="form-group">
+      <label>نوع المشكلة · Issue Type</label>
+      <select id="f-type">
+        <option value="">اختر...</option>
+        <option>مشكلة في الإعلان</option>
+        <option>مشكلة في الدفع أو الباقة</option>
+        <option>مشكلة تقنية في التطبيق</option>
+        <option>حذف الحساب أو البيانات</option>
+        <option>الإبلاغ عن إعلان مخالف</option>
+        <option>استفسار عام</option>
+        <option>Other / أخرى</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>الرسالة · Message</label>
+      <textarea id="f-msg" placeholder="اكتب رسالتك هنا..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="submitForm()">إرسال الرسالة ✉</button>
+    <div class="success-msg" id="success-msg">
+      ✅ تم استلام رسالتك! سنرد عليك خلال 24 ساعة.<br>
+      <small style="color:var(--cream);opacity:0.7;">We received your message and will reply within 24 hours.</small>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    <span>AUTOSOUQ JO</span> — قطع الغيار وبيع وشراء السيارات في الأردن<br>
+    جميع الحقوق محفوظة © 2025 AutoSouq JO<br>
+    <a href="mailto:rehamkhalil003@gmail.com" style="color:var(--gold); text-decoration:none;">rehamkhalil003@gmail.com</a>
+  </p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const ans = btn.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q.open').forEach(q => q.classList.remove('open'));
+  if (!isOpen) {
+    ans.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+function submitForm() {
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const type  = document.getElementById('f-type').value;
+  const msg   = document.getElementById('f-msg').value.trim();
+  if (!name || !email || !msg) {
+    alert('يرجى ملء جميع الحقول المطلوبة.');
+    return;
+  }
+  document.getElementById('success-msg').style.display = 'block';
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-email').value = '';
+  document.getElementById('f-type').value = '';
+  document.getElementById('f-msg').value = '';
+}
+</script>
+</body>
+</html>

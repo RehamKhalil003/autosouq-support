@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoSouq JO — سياسة الخصوصية | Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --maroon: #6e1428;
+    --maroon-dark: #3a0a14;
+    --maroon-deep: #1a0408;
+    --gold: #c9a84c;
+    --gold-light: #e8c86a;
+    --cream: #f5ede0;
+    --white: #ffffff;
+    --text-muted: #9a7a5a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--maroon-deep);
+    color: var(--white);
+    min-height: 100vh;
+    direction: rtl;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #3a0a14 0%, #1a0408 60%, #0d0204 100%);
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg, transparent, transparent 80px,
+      rgba(201,168,76,0.03) 80px, rgba(201,168,76,0.03) 82px
+    );
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    border: 2.5px solid var(--gold);
+    background: rgba(201,168,76,0.08);
+    margin-bottom: 20px;
+    font-size: 38px;
+  }
+
+  .hero h1 { font-size: clamp(28px,5vw,46px); font-weight: 900; color: var(--gold); letter-spacing: 2px; margin-bottom: 8px; }
+  .hero h2 { font-size: clamp(16px,3vw,22px); font-weight: 400; color: var(--cream); opacity: 0.85; margin-bottom: 6px; }
+  .hero p  { font-size: 14px; color: var(--text-muted); }
+
+  .divider {
+    width: 160px; height: 2px; margin: 24px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    position: relative;
+  }
+  .divider::after {
+    content: '◆'; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%); color: var(--gold); font-size: 10px;
+    background: var(--maroon-dark); padding: 0 6px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: var(--gold);
+    margin-top: 10px;
+  }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 48px 20px 60px; }
+
+  .lang-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 36px;
+    justify-content: center;
+  }
+
+  .lang-btn {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    color: var(--gold);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 15px;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .lang-btn.active, .lang-btn:hover {
+    background: rgba(201,168,76,0.2);
+    border-color: var(--gold);
+  }
+
+  .policy-section { margin-bottom: 36px; }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .section-title .num {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .policy-text {
+    font-size: 15px;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.9;
+  }
+
+  .policy-list {
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  .policy-list li {
+    padding: 8px 0 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.7;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .policy-list li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 8px;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .highlight-box {
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-top: 16px;
+  }
+
+  .highlight-box p { font-size: 15px; color: var(--cream); opacity: 0.85; line-height: 1.9; }
+
+  .contact-bar {
+    background: linear-gradient(135deg, rgba(110,20,40,0.4), rgba(26,4,8,0.7));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .contact-bar h3 { font-size: 20px; font-weight: 700; color: var(--gold); margin-bottom: 10px; }
+  .contact-bar p  { font-size: 15px; color: var(--cream); opacity: 0.8; line-height: 1.8; }
+  .contact-bar a  { color: var(--gold); text-decoration: none; font-weight: 700; }
+
+  .last-updated {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 36px;
+  }
+
+  footer {
+    background: var(--maroon-dark);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 48px;
+  }
+  footer p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+  footer span { color: var(--gold); }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* LTR section for English */
+  .ltr { direction: ltr; text-align: left; }
+  .ltr .section-title { flex-direction: row; }
+  .ltr .policy-list li { flex-direction: row; }
+
+  #en-content { display: none; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo-wrap">🔒</div>
+  <h1>AUTOSOUQ JO</h1>
+  <h2>سياسة الخصوصية</h2>
+  <p>Privacy Policy</p>
+  <div class="divider"></div>
+  <div class="badge">آخر تحديث: مايو 2025 · Last updated: May 2025</div>
+</div>
+
+<div class="container">
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="showLang('ar')">🇯🇴 العربية</button>
+    <button class="lang-btn" onclick="showLang('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- ═══════════════ ARABIC ═══════════════ -->
+  <div id="ar-content">
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">1</span> مقدمة</div>
+      <div class="policy-text">
+        مرحباً بك في تطبيق <strong style="color:var(--gold)">AutoSouq JO</strong>. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية جمع معلوماتك واستخدامها وحمايتها عند استخدامك لتطبيقنا.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">2</span> المعلومات التي نجمعها</div>
+      <ul class="policy-list">
+        <li>الاسم وعنوان البريد الإلكتروني ورقم الهاتف عند التسجيل</li>
+        <li>معلومات الإعلانات التي تنشرها (صور، أوصاف، أسعار)</li>
+        <li>بيانات الاستخدام مثل الصفحات التي تزورها والبحثات التي تجريها</li>
+        <li>معلومات الجهاز مثل نوع الهاتف ونظام التشغيل والإصدار</li>
+        <li>الموقع الجغرافي إذا أذنت بذلك لتحسين نتائج البحث</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">3</span> كيف نستخدم معلوماتك</div>
+      <ul class="policy-list">
+        <li>تشغيل التطبيق وتقديم خدماتنا بشكل صحيح</li>
+        <li>عرض الإعلانات ذات الصلة وتحسين نتائج البحث</li>
+        <li>التواصل معك بشأن حسابك أو إعلاناتك</li>
+        <li>تحسين التطبيق وتطوير ميزات جديدة</li>
+        <li>منع الاحتيال وضمان أمن المنصة</li>
+        <li>الامتثال للمتطلبات القانونية في المملكة الأردنية الهاشمية</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">4</span> مشاركة المعلومات مع أطراف ثالثة</div>
+      <div class="highlight-box">
+        <p>نحن <strong style="color:var(--gold)">لا نبيع</strong> بياناتك الشخصية لأي طرف ثالث. قد نشارك معلوماتك فقط في الحالات التالية:</p>
+      </div>
+      <ul class="policy-list" style="margin-top:14px">
+        <li>مزودو خدمات موثوقون يساعدوننا في تشغيل التطبيق (مثل الاستضافة والتحليلات)</li>
+        <li>عند الطلب القانوني من الجهات المختصة في الأردن</li>
+        <li>لحماية حقوق وسلامة مستخدمي التطبيق</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">5</span> أمان البيانات</div>
+      <div class="policy-text">
+        نستخدم تشفير SSL/TLS لحماية بياناتك أثناء النقل. يتم تخزين بياناتك على خوادم آمنة مع صلاحيات وصول محدودة. نراجع إجراءات الأمان بانتظام لضمان حماية معلوماتك.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">6</span> حقوقك</div>
+      <ul class="policy-list">
+        <li>الحق في الوصول إلى بياناتك الشخصية وطلب نسخة منها</li>
+        <li>الحق في تصحيح أي معلومات غير دقيقة</li>
+        <li>الحق في حذف حسابك وجميع بياناتك</li>
+        <li>الحق في الاعتراض على معالجة بياناتك لأغراض التسويق</li>
+        <li>الحق في تقييد استخدام بياناتك في حالات معينة</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">7</span> الاحتفاظ بالبيانات</div>
+      <div class="policy-text">
+        نحتفظ ببياناتك طالما حسابك نشط أو عند الحاجة لتقديم الخدمة. عند حذف حسابك، نحذف بياناتك خلال <strong style="color:var(--gold)">30 يوماً</strong>، باستثناء ما يقتضيه القانون الاحتفاظ به.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">8</span> خصوصية الأطفال</div>
+      <div class="policy-text">
+        تطبيقنا غير موجه للأطفال دون سن <strong style="color:var(--gold)">18 عاماً</strong>. لا نجمع عن قصد أي معلومات من الأطفال. إذا علمنا بذلك، سنحذف تلك المعلومات فوراً.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">9</span> التغييرات على هذه السياسة</div>
+      <div class="policy-text">
+        قد نحدّث هذه السياسة من وقت لآخر. سنخطرك بأي تغييرات جوهرية عبر إشعار داخل التطبيق أو البريد الإلكتروني. الاستمرار في استخدام التطبيق بعد التغييرات يعني موافقتك عليها.
+      </div>
+    </div>
+
+    <div class="contact-bar">
+      <h3>📬 تواصل معنا بشأن الخصوصية</h3>
+      <p>
+        إذا كان لديك أي استفسار حول سياسة الخصوصية أو تريد ممارسة حقوقك:<br><br>
+        📧 <a href="mailto:rehamkhalil003@gmail.com">rehamkhalil003@gmail.com</a><br>
+        💬 <a href="https://wa.me/00962799709164">واتساب: 00962799709164</a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div id="en-content" class="ltr">
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">1</span> Introduction</div>
+      <div class="policy-text">
+        Welcome to <strong style="color:var(--gold)">AutoSouq JO</strong>. We respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information when you use our app.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">2</span> Information We Collect</div>
+      <ul class="policy-list">
+        <li>Name, email address, and phone number when you register</li>
+        <li>Listing information you post (photos, descriptions, prices)</li>
+        <li>Usage data such as pages visited and searches performed</li>
+        <li>Device information including phone type, OS, and version</li>
+        <li>Location data if you grant permission, to improve search results</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">3</span> How We Use Your Information</div>
+      <ul class="policy-list">
+        <li>To operate the app and deliver our services properly</li>
+        <li>To show relevant listings and improve search results</li>
+        <li>To communicate with you about your account or listings</li>
+        <li>To improve the app and develop new features</li>
+        <li>To prevent fraud and ensure platform security</li>
+        <li>To comply with legal requirements in the Hashemite Kingdom of Jordan</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">4</span> Sharing with Third Parties</div>
+      <div class="highlight-box">
+        <p>We <strong style="color:var(--gold)">do not sell</strong> your personal data to any third party. We may share your information only in these cases:</p>
+      </div>
+      <ul class="policy-list" style="margin-top:14px">
+        <li>Trusted service providers who help us operate the app (e.g. hosting, analytics)</li>
+        <li>When legally required by competent authorities in Jordan</li>
+        <li>To protect the rights and safety of our users</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">5</span> Data Security</div>
+      <div class="policy-text">
+        We use SSL/TLS encryption to protect your data in transit. Your data is stored on secure servers with restricted access controls. We regularly review our security practices to ensure your information stays protected.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">6</span> Your Rights</div>
+      <ul class="policy-list">
+        <li>Right to access your personal data and request a copy</li>
+        <li>Right to correct any inaccurate information</li>
+        <li>Right to delete your account and all associated data</li>
+        <li>Right to object to processing your data for marketing purposes</li>
+        <li>Right to restrict how your data is used in certain cases</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">7</span> Data Retention</div>
+      <div class="policy-text">
+        We retain your data for as long as your account is active or as needed to provide the service. When you delete your account, we delete your data within <strong style="color:var(--gold)">30 days</strong>, except where retention is required by law.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">8</span> Children's Privacy</div>
+      <div class="policy-text">
+        Our app is not directed to children under <strong style="color:var(--gold)">18 years of age</strong>. We do not knowingly collect information from children. If we become aware of such collection, we will delete that information immediately.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-title"><span class="num">9</span> Changes to This Policy</div>
+      <div class="policy-text">
+        We may update this policy from time to time. We will notify you of any material changes via an in-app notification or email. Continued use of the app after changes means you accept the updated policy.
+      </div>
+    </div>
+
+    <div class="contact-bar ltr">
+      <h3>📬 Privacy Contact</h3>
+      <p>
+        For any privacy-related questions or to exercise your rights:<br><br>
+        📧 <a href="mailto:rehamkhalil003@gmail.com">rehamkhalil003@gmail.com</a><br>
+        💬 <a href="https://wa.me/00962799709164">WhatsApp: +962799709164</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="last-updated">آخر تحديث · Last updated: May 31, 2025</div>
+
+</div>
+
+<footer>
+  <p>
+    <span>AUTOSOUQ JO</span> — قطع الغيار وبيع وشراء السيارات في الأردن<br>
+    جميع الحقوق محفوظة © 2025 AutoSouq JO<br>
+    <a href="mailto:rehamkhalil003@gmail.com">rehamkhalil003@gmail.com</a>
+  </p>
+</footer>
+
+<script>
+function showLang(lang) {
+  document.getElementById('ar-content').style.display = lang === 'ar' ? 'block' : 'none';
+  document.getElementById('en-content').style.display = lang === 'en' ? 'block' : 'none';
+  document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (i === 0 && lang === 'ar') || (i === 1 && lang === 'en'));
+  });
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+}
+</script>
+</body>
+</html>
